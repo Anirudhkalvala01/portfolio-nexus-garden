@@ -6,7 +6,7 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
+    --card: 261 40% 96%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
@@ -14,14 +14,14 @@
     --primary-foreground: 210 40% 98%;
     --secondary: 252 100% 95%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
+    --muted: 261 40% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 261 40% 50%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 261 40% 90%;
+    --input: 261 40% 90%;
     --ring: 261 40% 50%;
     --radius: 0.5rem;
   }
@@ -33,6 +33,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(109.6deg, rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1%);
   }
 }
 
@@ -46,4 +47,16 @@
 
 .page-enter-active {
   @apply opacity-100;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500;
+}
+
+.social-button {
+  @apply transition-all hover:scale-110 hover:shadow-lg;
+}
+
+.card {
+  @apply bg-white/80 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300;
 }

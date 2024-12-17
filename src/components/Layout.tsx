@@ -12,11 +12,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b">
+      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex">
-              <Link to="/" className="flex items-center font-bold text-xl">
+              <Link to="/" className="flex items-center font-bold text-xl gradient-text">
                 Portfolio
               </Link>
             </div>
@@ -28,7 +28,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   className={cn(
                     "px-3 py-2 rounded-md text-sm font-medium transition-colors",
                     location.pathname === item.path
-                      ? "text-primary bg-secondary"
+                      ? "text-primary bg-secondary shadow-md"
                       : "text-foreground/60 hover:text-primary hover:bg-secondary"
                   )}
                 >
@@ -44,7 +44,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           {children}
         </div>
       </main>
-      <footer className="border-t py-8">
+      <footer className="border-t py-8 bg-white/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-foreground/60">
           © {new Date().getFullYear()} Portfolio. All rights reserved.
         </div>
